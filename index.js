@@ -5,23 +5,17 @@ function hideAllPages() {
   document.getElementById("projects").style.display = "none";
 }
 
-function showHome() {
-  hideAllPages();
-  var page = (document.getElementById("home").style.display = "block");
-}
-//showHome();
-
-function showSkills() {
-  hideAllPages();
-  var page = (document.getElementById("skills").style.display = "block");
-}
-
 function showLanguages() {
-  hideAllPages();
-  var page = (document.getElementById("languages").style.display = "block");
+  showPage("languages");
 }
 
 function showProjects() {
-  hideAllPages();
-  var page = (document.getElementById("projects").style.display = "block");
+  showPage("projects");
 }
+
+function showPage(id) {
+  hideAllPages();
+  var page = (document.getElementById(id).style.display = "block");
+}
+
+showPage("home");
