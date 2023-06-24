@@ -64,6 +64,11 @@ header {
 #my-picture img {
   border: 4px solid white;
   border-radius: 50%;
+  transition: 0.5s;
+}
+
+#my-picture img:hover {
+  border-color: aquamarine;
 }
 
 #header-info {
@@ -113,7 +118,10 @@ header {
   color: white;
 }
 
+#top-menu-bar a.active {
+  background-color: #05798899;
+}
 #top-menu-bar a:hover {
   color: gray;
-  background-color: black;
+  background-color: #057988;
 }
