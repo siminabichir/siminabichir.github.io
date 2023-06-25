@@ -1,0 +1,6 @@
+[
+  { "name": "HTML", "favorite": false },
+  { "name": "CSS" },
+  { "name": "JS", "favorite": true },
+  { "name": "Excel" }
+]
