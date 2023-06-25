@@ -23,13 +23,12 @@ function showPage(id) {
 
   hide(activePage);
 
+  activePage = id;
+
   var link = $(`#top-menu-bar a[data-page=${id}]`);
   link.classList.add("active");
 
-  var page = document.getElementById(id);
-  page.style.display = "block";
-  show(id);
-  activePage = id;
+  show(activePage);
 }
 
 function clickOnMenu(e) {
