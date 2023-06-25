@@ -44,6 +44,16 @@ function clickOnMenu(e) {
   }
 }
 
+function showSkills() {
+  var skills = ["HTML", "CSS", "JS"];
+  var htmlSkills = skills.map(function (skill) {
+    return `<li>${skill}</li>`;
+  });
+  var ul = $("#skills ul");
+  ul.innerHTML = htmlSkills.join("");
+}
+
 // start our code
-showPage("home");
+showPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
+showSkills();
