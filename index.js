@@ -1,24 +1,34 @@
 var activePage = "home";
 
 // utilities functions
+
+function $(selector) {
+  return document.querySelector(selector);
+}
+
 function hide(id) {
-  document.getElementById(id).style.display = "none";
+  console.info("hide %o element", id);
+  $(`#${id}`).style.display = "none";
+}
+
+function show(id) {
+  var page = $("#" + id);
+  console.info("show %o", id, page);
+  page.style.display = "block";
 }
 
 function showPage(id) {
-  var oldLink = document.querySelector(
-    `#top-menu-bar a[data-page=${activePage}]`
-  );
+  var oldLink = $(`#top-menu-bar a[data-page=${activePage}]`);
   oldLink.classList.remove("active");
 
   hide(activePage);
 
-  var link = document.querySelector(`#top-menu-bar a[data-page=${id}]`);
+  var link = $(`#top-menu-bar a[data-page=${id}]`);
   link.classList.add("active");
 
   var page = document.getElementById(id);
   page.style.display = "block";
-
+  show(id);
   activePage = id;
 }
 
@@ -37,4 +47,4 @@ function clickOnMenu(e) {
 
 // start our code
 showPage("home");
-document.getElementById("top-menu-bar").addEventListener("click", clickOnMenu);
+$("#top-menu-bar").addEventListener("click", clickOnMenu);
